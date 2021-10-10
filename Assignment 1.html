@@ -8,60 +8,143 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Style the header */
+        
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        /* Create two columns/boxes that floats next to each other */
+        
+        nav {
+            float: left;
+            width: 30%;
+            height: 5000px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+        /* Style the list inside the menu */
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            /* only for demonstration, should be removed */
+        }
+        /* Clear floats after the columns */
+        
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Style the footer */
+        
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <center>
-        <h1>Github Guide By Nauman Aziz</h1>
-        <img src="git-push.png" width="600" height="100">
-    </center>
 
+    <header>
+        <h2>Github Guide By Nauman Aziz</h2>
+    </header>
 
-    <h2>Follow the steps below</h2>
-    <h2>&emsp;Step #1:</h2>
-    <h5>&emsp;&emsp;Create a repository from your github account by clicking the green button "New"</h5>
-    <center>
-        <img src="step_1.png">
-    </center>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </nav>
 
-    <h2>&emsp;Step #2:</h2>
-    <h5>&emsp;&emsp;Give a unique name to the repository and make it either public or private</h5>
-    <img src="step_2.png">
-    <h2>&emsp;Step #3:</h2>
-    <h5>&emsp;&emsp;After creating the repository copy its link</h5>
-    <img src="step_3.png">
-    <h2>&emsp;Step #4:</h2>
-    <h5>&emsp;&emsp;Now its time to make its clone at your local PC</h5>
-    <h5>&emsp;&emsp;For this you have to open cmd in the file or folder and now write command 'git clone' and then paste the URL copied in step #3 </h5>
-    <img src="step_4.png">
-    <h2>&emsp;Step #5:</h2>
-    <h5>&emsp;&emsp;Okey let's make some documents in that local repository.<br>&emsp;&emsp;In our case we are making a simple html document </h5>
-    <img src="step_5.png">
-    <center>
-        <h3>its time to play with git commands</h3>
-    </center>
-    <h2>&emsp;Step #6:</h2>
-    <h5>&emsp;&emsp;Get back to our cmd and here initialized the git repository </h5>
-    <h5>&emsp;&emsp;in our local repository</h5>
-    <h5>&emsp;&emsp;This all done by single command <i>git init</i> </h5>
-    <img src="step_6.png">
-    <h2>&emsp;Step #7:</h2>
-    <h5>&emsp;&emsp;Checkout its status by <i> git status</i></h5>
-    <img src="step_7.png">
-    <h2>&emsp;Step #8:</h2>
-    <h5>&emsp;&emsp;Add all files or single file. In our case we are considering to add all files</h5>
-    <h5>&emsp;&emsp;For this we have to use this command <i>git add .</i></h5>
-    <img src="step_8.png">
-    <h2>&emsp;Step #9:</h2>
-    <h5>&emsp;&emsp;Now commit this with some message done by a command as below</h5>
-    <img src="step_9.png">
-    <h2>&emsp;Step #10:</h2>
-    <h5>&emsp;&emsp;Set the origin URL and it is the same as the link copied in step #3</h5>
-    <img src="step_10.png">
-    <h2>&emsp;Step #11:</h2>
-    <h5>&emsp;&emsp;In the last just push the code to the master branch and we are done</h5>
-    <h5>&emsp;&emsp;Here we used the command <i>git push -u origin master</i></h5>
-    <img src="step_11.png">
+        <article>
+            <h2>Follow the steps below</h2>
+            <h2>&emsp;Step #1:</h2>
+            <h5>&emsp;&emsp;Create a repository from your github account by clicking the green button "New"</h5>
+            <center>
+                <img src="step_1.png">
+            </center>
+
+            <h2>&emsp;Step #2:</h2>
+            <h5>&emsp;&emsp;Give a unique name to the repository and make it either public or private</h5>
+            <img src="step_2.png">
+            <h2>&emsp;Step #3:</h2>
+            <h5>&emsp;&emsp;After creating the repository copy its link</h5>
+            <img src="step_3.png">
+            <h2>&emsp;Step #4:</h2>
+            <h5>&emsp;&emsp;Now its time to make its clone at your local PC</h5>
+            <h5>&emsp;&emsp;For this you have to open cmd in the file or folder and now write command 'git clone' and then paste the URL copied in step #3 </h5>
+            <img src="step_4.png">
+            <h2>&emsp;Step #5:</h2>
+            <h5>&emsp;&emsp;Okey let's make some documents in that local repository.<br>&emsp;&emsp;In our case we are making a simple html document </h5>
+            <img src="step_5.png">
+            <center>
+                <h3>its time to play with git commands</h3>
+            </center>
+            <h2>&emsp;Step #6:</h2>
+            <h5>&emsp;&emsp;Get back to our cmd and here initialized the git repository </h5>
+            <h5>&emsp;&emsp;in our local repository</h5>
+            <h5>&emsp;&emsp;This all done by single command <i>git init</i> </h5>
+            <img src="step_6.png">
+            <h2>&emsp;Step #7:</h2>
+            <h5>&emsp;&emsp;Checkout its status by <i> git status</i></h5>
+            <img src="step_7.png">
+            <h2>&emsp;Step #8:</h2>
+            <h5>&emsp;&emsp;Add all files or single file. In our case we are considering to add all files</h5>
+            <h5>&emsp;&emsp;For this we have to use this command <i>git add .</i></h5>
+            <img src="step_8.png">
+            <h2>&emsp;Step #9:</h2>
+            <h5>&emsp;&emsp;Now commit this with some message done by a command as below</h5>
+            <img src="step_9.png">
+            <h2>&emsp;Step #10:</h2>
+            <h5>&emsp;&emsp;Set the origin URL and it is the same as the link copied in step #3</h5>
+            <img src="step_10.png">
+            <h2>&emsp;Step #11:</h2>
+            <h5>&emsp;&emsp;In the last just push the code to the master branch and we are done</h5>
+            <h5>&emsp;&emsp;Here we used the command <i>git push -u origin master</i></h5>
+            <img src="step_11.png">
+
+        </article>
+    </section>
+
+    <footer>
+        <p>Punjab University College of Information Technology</p>
+    </footer>
+
 
 
 </body>
